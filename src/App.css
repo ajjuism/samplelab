@@ -1,38 +1,79 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Urbanist', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background-color: #2e2e2e;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.h1 {
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drum-pads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.drum-pad-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #222222;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  user-select: none;
+  width: 150px;
+  height: 150px;
+}
+
+.drum-pad p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.waveform {
+  width: 150px;
+  height: 50px;
+  /* margin-top: 1rem; */
+  margin-bottom: 50%;
+
+}
+
+.dropzone {
+  background-color: #f8f8f8;
+  border: 2px dashed #c8c8c8;
+  border-radius: 5px;
+  padding: 1rem;
+  cursor: pointer;
+  user-select: none;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dropzone.active {
+  background-color: #e8e8e8;
+  border-color: #a8a8a8;
+}
+
+.dropzone p {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
 }
