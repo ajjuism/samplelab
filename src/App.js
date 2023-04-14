@@ -29,7 +29,8 @@ function DrumPad({ keyBinding, sample, index }) {
 
   const playSample = () => {
     if (sample) {
-      waveSurferRef.current.playPause();
+      waveSurferRef.current.stop();
+      waveSurferRef.current.play();
     }
   };
 
