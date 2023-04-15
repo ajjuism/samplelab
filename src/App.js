@@ -47,7 +47,8 @@ function SampleDropzone({ onDrop }) {
   return (
     <div {...getRootProps()} className={`dropzone ${isDragActive ? "active" : ""}`}>
       <input {...getInputProps()} />
-      <p>Drop sample here or click to select</p>
+      <p className="dropzone-text-large">Drop sample here or click to select</p>
+      <p className="dropzone-text-small">Tap to select sample</p>
     </div>
   );
 }
@@ -89,10 +90,17 @@ function App() {
       <h1>Sample Lab</h1>
     </div>
     <div className="instruction-card">
-      <i className="fas fa-info-circle instruction-icon"></i>
-      <p className="instruction-text">Upload your samples by dragging and dropping or clicking the sample slots. Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples.</p>
-    </div>
-      <div className="drum-pads">
+      <div className="instruction-icon">
+        <i className="fas fa-info-circle"></i>
+      </div>
+      <p className="instruction-text-large">
+        Upload your samples by dragging and dropping or clicking the sample slots. Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples.
+      </p>
+      <p className="instruction-text-small">
+        Upload your samples by tapping on the "Tap to select sample" button. Press or tap the drum pads to play the samples.
+      </p>
+    </div>      
+    <div className="drum-pads">
         {samples.map((sample, index) => (
           <div key={index} className="drum-pad-container">
             <DrumPad keyBinding={keyBindings[index]} sample={sample} index={index} />
