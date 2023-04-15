@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import WaveSurfer from "wavesurfer.js";
 import "./App.css";
+import logo from './logo.png';
 
 const keyBindings = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I'];
 
@@ -13,9 +14,9 @@ function DrumPad({ keyBinding, sample, index }) {
     if (waveformRef.current && sample) {
       waveSurferRef.current = WaveSurfer.create({
         container: waveformRef.current,
-        waveColor: "turquoise",
-        progressColor: "teal",
-        cursorColor: "navy",
+        waveColor: "teal",
+        progressColor: "turquoise",
+        cursorColor: "#0067A5",
         barWidth: 3,
       });
       waveSurferRef.current.load(sample.preview);
@@ -30,8 +31,7 @@ function DrumPad({ keyBinding, sample, index }) {
   const playSample = () => {
     if (sample) {
       waveSurferRef.current.stop();
-      waveSurferRef.current.play();
-    }
+      waveSurferRef.current.play();    }
   };
 
   return (
@@ -84,10 +84,14 @@ function App() {
 
   return (
     <div className="App">
-      <div className="logo-container">
-        {/* <img src="/public/logo.png" alt="Sample Lab Logo" className="logo" /> */}
-      </div>
+      <div className="header">
+      <img src={logo} alt="Sample Lab Logo" className="logo" />
       <h1>Sample Lab</h1>
+    </div>
+    <div className="instruction-card">
+      <i className="fas fa-info-circle instruction-icon"></i>
+      <p className="instruction-text">Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples. Upload your samples by dragging and dropping or clicking the sample slots.</p>
+    </div>
       <div className="drum-pads">
         {samples.map((sample, index) => (
           <div key={index} className="drum-pad-container">

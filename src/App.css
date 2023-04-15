@@ -6,11 +6,40 @@
   justify-content: center;
   min-height: 100vh;
   background-color: #2e2e2e;
-  color: white;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instruction-card {
+  display: flex;
+  max-width: 600px;
+  align-items: center;
+  background-color: #444;
+  padding: 1rem;
+  border-radius: 5px;
+  /* box-shadow: 0 4px 6px rgba(62, 62, 62, 0.1); */
+  margin-bottom: 2rem;
+}
+
+.instruction-icon {
+  color: turquoise;
+  margin-right: 0.5rem;
+  font-size: 14px;
+}
+
+.instructions-card i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .h1 {
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .drum-pads {
@@ -35,8 +64,8 @@
   padding: 1rem;
   cursor: pointer;
   user-select: none;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 .drum-pad p {
@@ -45,22 +74,22 @@
 }
 
 .waveform {
-  width: 150px;
-  height: 50px;
+  width: 110px;
+  height: 110px;
   /* margin-top: 1rem; */
-  margin-bottom: 50%;
-
+  /* margin-bottom: 50%; */
+  overflow: hidden; /* hide overflow */
 }
 
 .dropzone {
-  background-color: #f8f8f8;
-  border: 2px dashed #c8c8c8;
+  background-color: #3b3b3b;
+  border: 2px dashed #787878;
   border-radius: 5px;
   padding: 1rem;
   cursor: pointer;
   user-select: none;
-  width: 150px;
-  height: 50px;
+  width: 120px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -68,12 +97,26 @@
 }
 
 .dropzone.active {
-  background-color: #e8e8e8;
-  border-color: #a8a8a8;
+  background-color: #707070;
+  border-color: #d2d0d0;
 }
 
 .dropzone p {
   font-size: 0.8rem;
-  color: #888;
+  color: #e8e8e8;
   margin: 0;
+}
+
+.logo {
+  width: 30px; /* adjust the width */
+  height: auto; /* maintain aspect ratio */
+  display: block;
+  margin-right: 1rem;
+}
+
+.instruction-text {
+  margin: 0;
+  color: #e8e8e8;
+  font-size: 14px;
+  text-align: center;
 }
