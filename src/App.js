@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { useDropzone } from "react-dropzone";
 import WaveSurfer from "wavesurfer.js";
 import "./App.css";
-import logo from './logo.png';
+import FAQ from './FAQ';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 const keyBindings = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I'];
 
@@ -85,22 +87,19 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">
-      <img src={logo} alt="Sample Lab Logo" className="logo" />
-      <h1>Sample Lab</h1>
-    </div>
-    <div className="instruction-card">
-      <div className="instruction-icon">
-        <i className="fas fa-info-circle"></i>
+<Navbar />  
+      <div className="instruction-card">
+        <div className="instruction-icon">
+          <i className="fas fa-info-circle"></i>
+        </div>
+        <p className="instruction-text-large">
+          Upload your samples by dragging and dropping or clicking the sample slots. Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples.
+        </p>
+        <p className="instruction-text-small">
+          Upload your samples by tapping on the "Tap to select sample" button. Press or tap the drum pads to play the samples.
+        </p>
       </div>
-      <p className="instruction-text-large">
-        Upload your samples by dragging and dropping or clicking the sample slots. Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples.
-      </p>
-      <p className="instruction-text-small">
-        Upload your samples by tapping on the "Tap to select sample" button. Press or tap the drum pads to play the samples.
-      </p>
-    </div>      
-    <div className="drum-pads">
+      <div className="drum-pads">
         {samples.map((sample, index) => (
           <div key={index} className="drum-pad-container">
             <DrumPad keyBinding={keyBindings[index]} sample={sample} index={index} />
@@ -110,6 +109,8 @@ function App() {
           </div>
         ))}
       </div>
+      <FAQ /> {/* Add the FAQ component here */}
+      <Footer /> {/* Add the Footer component here */}
     </div>
   );
 }

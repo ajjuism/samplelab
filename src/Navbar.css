@@ -1,0 +1,31 @@
+.navbar {
+    background-color: #222222;
+    padding: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .navbar-logo {
+    width: 20px;
+    height: auto;
+    margin-right: 1rem; /* Add some space between the logo and the title */
+
+  }
+  
+  .navbar-title {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+  }
+  
