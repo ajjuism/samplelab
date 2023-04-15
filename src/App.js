@@ -90,7 +90,7 @@ function App() {
     </div>
     <div className="instruction-card">
       <i className="fas fa-info-circle instruction-icon"></i>
-      <p className="instruction-text">Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples. Upload your samples by dragging and dropping or clicking the sample slots.</p>
+      <p className="instruction-text">Upload your samples by dragging and dropping or clicking the sample slots. Press the corresponding keyboard keys (Q, W, E, R, T, Y, U, I) to play the samples.</p>
     </div>
       <div className="drum-pads">
         {samples.map((sample, index) => (
