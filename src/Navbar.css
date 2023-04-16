@@ -1,51 +1,92 @@
 .navbar {
-    background-color: #222222;
-    padding: 1rem;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-  }
-  
+  background-color: #222222;
+  padding: 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; /* Add this to stretch the container to the full width */
+  box-sizing: border-box; /* Add this to prevent overflow */
+}
+
+.logo-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 20px;
+  height: auto;
+  margin-right: 1rem; /* Add some space between the logo and the title */
+
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+}
+
+.navbar-button {
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: rgb(60, 60, 60);
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 0;
+  margin-left: 900px;
+}
+
+.link-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: medium;
+}
+
+.navbar-link:hover {
+  color: turquoise;
+}
+
+.title-link {
+  text-decoration: none;
+}
+
+.title-link:hover .navbar-title {
+  color: turquoise;
+}
+
+@media (max-width: 768px) {
   .navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .navbar-logo {
-    width: 20px;
-    height: auto;
-    margin-right: 1rem; /* Add some space between the logo and the title */
-
-  }
-  
-  .navbar-title {
-    font-size: 1.2rem;
-    color: #fff;
-    margin: 0;
-  }
-  
-  .navbar-button {
-    font-size: 0.8rem;
-    color: #fff;
-    background-color: rgb(60, 60, 60);
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    margin: 0;
-    margin-left: 900px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 1rem; /* Add padding to the container on small screens */
   }
 
-  .navbar-button:hover {  
-    background-color: teal;
+  .logo-title-container {
+    flex-grow: 1;
   }
 
-  @media (max-width: 768px) {
-    .navbar-button {
-      display: none;
-    }
+  .link-container {
+    flex-grow: 0; /* Add this to prevent the link from taking up extra space */
   }
+
+  .navbar-link {
+    margin-right: 1.5rem;
+  }
+
+}
