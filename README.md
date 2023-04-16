@@ -2,7 +2,7 @@
 Sample Lab is a fun experiment for users to play around with audio samples on a classic 4*4 drum pad. Users can upload their own custom audio samples and see the waveforms for the audio as well.
 
 ### Features
-- Interactive drum pads with preloaded audio samples
+- Interactive drum pads with visual feedback
 - Upload custom audio samples to drum pads
 - Waveform visualization for each audio sample
 - Responsive design for desktop and mobile devices
