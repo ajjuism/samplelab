@@ -8,6 +8,7 @@ function Navbar() {
       <div className="navbar-container">
         <img src={logo} alt="Sample Lab Logo" className="navbar-logo" />
         <h1 className="navbar-title">Sample Lab</h1>
+        <h1 className="navbar-button">Get Samples</h1>
       </div>
     </nav>
   );

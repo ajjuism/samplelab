@@ -29,3 +29,17 @@
     margin: 0;
   }
   
+  .navbar-button {
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: rgb(60, 60, 60);
+    border: none;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 0;
+    margin-left: 900px;
+  }
+
+  .navbar-button:hover {  
+    background-color: teal;
+  }
