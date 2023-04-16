@@ -43,3 +43,9 @@
   .navbar-button:hover {  
     background-color: teal;
   }
+
+  @media (max-width: 768px) {
+    .navbar-button {
+      display: none;
+    }
+  }
